@@ -1,4 +1,4 @@
-setwd("C:/Users/tzm0087/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/THIRD YEAR/AGENT-BASED MODELING")
+setwd("")
 
 # Placeholder function to calculate Euclidean distance between two points
 #euclidean_distance <- function(x1, y1, x2, y2) {
