@@ -5,6 +5,7 @@ setwd("")
   #sqrt((x2 - x1)^2 + (y2 - y1)^2)
 #}
 
+# Create an output folder to hold the mean resistance values
 experiment_name <- "0.1_Culex"
 
 output_folder <- "output"
@@ -22,7 +23,8 @@ simulate_species <- function(mean_resistance, Pop_size, lifespan_male, lifespan_
     days_alive = sample(0:lifespan_female, Pop_size, rep=TRUE)
     
   )
-  
+
+  # Set when mosquitoes will breed
   population$last_laid <- sample(0:population$days_alive-1,Pop_size,rep=TRUE)
   
   num_eggs_laid <- rep(0, nrow(population))  # Initialize a vector to track egg-laying for each female
@@ -129,7 +131,7 @@ if (length(hatched_eggs) > 0 && sum(hatched_eggs) > 0) {
         population <- population[-excess_indices[1:excess_to_remove], , drop = FALSE]
       }
       
-      # any mosquito that is older than lifespan dies
+      # Any mosquito that is older than lifespan dies
       
       # output result to data frame
       cat(paste("Generation", generation, ", Day", day, ": Resistance mean", mean(population$resistance), ", Population size", nrow(population), "\n"))
@@ -177,7 +179,7 @@ mortality_rate <- 0.7
 num_days_per_generation <- 9
 carrying_capacity_culex <- 8000 # Set the carrying capacity
 starting_mean_resistance <- 0.1  
-#migration rate<-???
+#migration rate <-???
 
 
 # Simulate Culex mosquitoes with the modified function
@@ -202,7 +204,7 @@ for (i in 1:num_generations_culex) {
 }
 
 
-
+# Create graphs, load packages
 # install.packages("ggplot2")  # if not installed
 # install.packages("gganimate")
 # install.packages("transformr")
