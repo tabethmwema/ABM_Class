@@ -171,7 +171,7 @@ eggs_laid_culex <- 50
 days_to_hatch_culex <- 5 # Days for eggs to hatch
 days_between_eggs_culex <- 2
 num_generations_culex <- 20
-spraying_interval_culex <- 100 # Adjust the spraying interval for Culex
+spraying_interval_culex <- 3 # Adjust the spraying interval
 resistance_increase_culex <- 0.05
 mortality_rate <- 0.7
 num_days_per_generation <- 9
